@@ -18,7 +18,7 @@ config:
           theme: brand
         -
           text: Github
-          link: https://github.com/mrcchenfeng
+          link: https://github.com/CloudSwordSage
           theme: alt
 
 ---
