@@ -12,13 +12,13 @@ export default defineThemeConfig({
     location: "重庆",
   },
   social: [
-    { icon: "github", link: "https://github.com/mrcchenfeng" },
+    { icon: "github", link: "https://github.com/CloudSwordSage" },
     { icon: "bilibili", link: "https://space.bilibili.com/523613033" },
   ],
   navbarSocialIncludes: ["github"],
   logo: "/images/blogger.jpg",
   footer: {
-    copyright: "Copyright © 2024-present mrcchenfeng",
+    copyright: "Copyright © 2024-present CloudSwordSage",
   },
   navbar,
 });
