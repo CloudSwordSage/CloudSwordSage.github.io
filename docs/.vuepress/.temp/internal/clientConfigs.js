@@ -15,6 +15,7 @@ import * as clientConfig13 from 'E:/CloudSwordSage.github.io/node_modules/@vuepr
 import * as clientConfig14 from 'E:/CloudSwordSage.github.io/node_modules/@vuepress/plugin-copy-code/lib/client/config.js'
 import * as clientConfig15 from 'E:/CloudSwordSage.github.io/docs/.vuepress/.temp/prismjs/config.js'
 import * as clientConfig16 from 'E:/CloudSwordSage.github.io/node_modules/@vuepress/plugin-comment/lib/client/config.js'
+import * as clientConfig17 from 'E:/CloudSwordSage.github.io/node_modules/@vuepress/plugin-baidu-analytics/lib/client/config.js'
 
 export const clientConfigs = [
   clientConfig0,
@@ -34,4 +35,5 @@ export const clientConfigs = [
   clientConfig14,
   clientConfig15,
   clientConfig16,
+  clientConfig17,
 ].map((m) => m.default).filter(Boolean)
