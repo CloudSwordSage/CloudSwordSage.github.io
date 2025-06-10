@@ -16,7 +16,7 @@ config:
       }
     hero:
       name: 墨烟行
-      text: 一个简约的，功能丰富的 vuepress 文档&博客 主题
+      text: “我们有两个方法来进行软件设计：一个是让其足够的简单以至于让BUG无法藏身；另一个就是让其足够的复杂，让人找不到BUG。前者更难一些” — C.A.R. Hoare
       actions:
         -
           theme: brand

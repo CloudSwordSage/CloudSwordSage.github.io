@@ -2,12 +2,12 @@ import { defineThemeConfig } from "vuepress-theme-plume";
 import navbar from "./navbar";
 
 export default defineThemeConfig({
-  // 在这里配置主题
   profile: {
     name: "墨烟行",
-    description: "描述文字",
+    description:
+      "“我们有两个方法来进行软件设计：一个是让其足够的简单以至于让BUG无法藏身；另一个就是让其足够的复杂，让人找不到BUG。前者更难一些” — C.A.R. Hoare",
     avatar: "/images/blogger.jpg",
-    circle: true, // 是否为圆形头像
+    circle: true,
     organization: "重庆城市管理职业学院",
     location: "重庆",
   },
