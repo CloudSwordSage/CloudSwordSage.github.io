@@ -9,7 +9,6 @@ import { backToTopPlugin } from "@vuepress/plugin-back-to-top";
 import { readingTimePlugin } from "@vuepress/plugin-reading-time";
 import { copyCodePlugin } from "@vuepress/plugin-copy-code";
 import { sitemapPlugin } from "@vuepress/plugin-sitemap";
-import { prismjsPlugin } from "@vuepress/plugin-prismjs";
 import { commentPlugin } from "@vuepress/plugin-comment";
 import { baiduAnalyticsPlugin } from "@vuepress/plugin-baidu-analytics";
 
@@ -74,19 +73,6 @@ export default defineUserConfig({
 
     sitemapPlugin({
       hostname: "https://www.cloudswordsage.top/",
-    }),
-
-    prismjsPlugin({
-      collapsedLines: 12,
-      preloadLanguages: [
-        "markdown",
-        "js",
-        "ts",
-        "html",
-        "css",
-        "java",
-        "python",
-      ],
     }),
 
     commentPlugin({
