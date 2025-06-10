@@ -10,12 +10,24 @@
   "author": "墨烟行",
   "license": "MIT",
   "devDependencies": {
-    "@vuepress/bundler-vite": "^2.0.0-rc.14",
-    "flowchart.ts": "^3.0.0",
-    "vuepress": "^2.0.0-rc.14",
-    "vuepress-theme-plume": "^1.0.0-rc.86"
+    "@vuepress/bundler-vite": "^2.0.0-rc.23",
+    "@vuepress/plugin-back-to-top": "^2.0.0-rc.108",
+    "@vuepress/plugin-baidu-analytics": "^2.0.0-rc.108",
+    "@vuepress/plugin-comment": "^2.0.0-rc.108",
+    "@vuepress/plugin-copy-code": "^2.0.0-rc.108",
+    "@vuepress/plugin-markdown-math": "^2.0.0-rc.108",
+    "@vuepress/plugin-prismjs": "^2.0.0-rc.108",
+    "@vuepress/plugin-reading-time": "^2.0.0-rc.108",
+    "@vuepress/plugin-revealjs": "^2.0.0-rc.108",
+    "@vuepress/plugin-sitemap": "^2.0.0-rc.108",
+    "flowchart.ts": "^3.0.1",
+    "typescript": "^5.8.3",
+    "vuepress": "^2.0.0-rc.23",
+    "vuepress-theme-plume": "^1.0.0-rc.153"
   },
   "dependencies": {
-    "reveal.js": "^5.1.0"
+    "@vuepress/plugin-search": "^2.0.0-rc.108",
+    "reveal.js": "^5.2.1",
+    "vuepress-plugin-medium-zoom": "^1.1.9"
   }
 }
