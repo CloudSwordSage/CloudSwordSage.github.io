@@ -1,33 +1,30 @@
 ---
-home: true
-title: Home
-heroImage: https://vuejs.press/images/hero.png
-actions:
-  - text: Get Started
-    link: /getting-started.html
-    type: primary
+pageLayout: 'home'
+config:
+  # -
+  #   type: profile
+  #   name: 墨烟行
+  #   description: 即使慢，驰而不息，纵会落后，纵会失败，但必须能够到达他所向的目标。
+  #   avatar: /images/blogger.jpg
+  -
+    type: hero
+    full: true
+    background: tint-plate
+    tintPlate: {
+      light: 200,
+      dark: 150
+      }
+    hero:
+      name: 墨烟行
+      text: 一个简约的，功能丰富的 vuepress 文档&博客 主题
+      actions:
+        -
+          theme: brand
+          text: 我的博客
+          link: /blog/
+        -
+          theme: alt
+          text: Github
+          link: https://github.com/mrcchenfeng
 
-  - text: Introduction
-    link: https://vuejs.press/guide/introduction.html
-    type: secondary
-
-features:
-  - title: Simplicity First
-    details: Minimal setup with markdown-centered project structure helps you focus on writing.
-  - title: Vue-Powered
-    details: Enjoy the dev experience of Vue, use Vue components in markdown, and develop custom themes with Vue.
-  - title: Performant
-    details: VuePress generates pre-rendered static HTML for each page, and runs as an SPA once a page is loaded.
-  - title: Themes
-    details: Providing a default theme out of the box. You can also choose a community theme or create your own one.
-  - title: Plugins
-    details: Flexible plugin API, allowing plugins to provide lots of plug-and-play features for your site.
-  - title: Bundlers
-    details: Default bundler is Vite, while Webpack is also supported. Choose the one you like!
-
-footer: MIT Licensed | Copyright © 2018-present VuePress Community
 ---
-
-This is the content of home page. Check [Home Page Docs][default-theme-home] for more details.
-
-[default-theme-home]: https://vuejs.press/reference/default-theme/frontmatter.html#home-page
