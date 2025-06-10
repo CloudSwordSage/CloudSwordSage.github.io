@@ -1,15 +1,9 @@
 import { defineUserConfig } from "vuepress";
 import { viteBundler } from "@vuepress/bundler-vite";
 import { plumeTheme } from "vuepress-theme-plume";
-import { markdownMathPlugin } from "@vuepress/plugin-markdown-math";
 import { revealJsPlugin } from "@vuepress/plugin-revealjs";
-import { searchPlugin } from "@vuepress/plugin-search";
 import mediumZoomPlugin from "vuepress-plugin-medium-zoom";
-import { backToTopPlugin } from "@vuepress/plugin-back-to-top";
-import { readingTimePlugin } from "@vuepress/plugin-reading-time";
-import { copyCodePlugin } from "@vuepress/plugin-copy-code";
-import { sitemapPlugin } from "@vuepress/plugin-sitemap";
-import { commentPlugin } from "@vuepress/plugin-comment";
+import { markdownExtPlugin } from "@vuepress/plugin-markdown-ext";
 
 export default defineUserConfig({
   lang: "zh-CN",
@@ -36,59 +30,41 @@ export default defineUserConfig({
     ],
   ],
   theme: plumeTheme({
+    markdown: {
+      mermaid: true,
+      chartjs: true,
+      echarts: true,
+      flowchart: true,
+      markmap: true,
+      plantuml: true,
+      timeline: true,
+      plot: true,
+      codeTree: true,
+      field: true,
+      codeTabs: {
+        icon: true,
+      },
+      math: {
+        type: "katex",
+      },
+    },
+    copyCode: {},
+    codeHighlighter: {
+      lineNumbers: true,
+      collapsedLines: true,
+    },
+    readingTime: {
+      wordPerMinute: 300,
+    },
     plugins: {
       markdownEnhance: {
         flowchart: true,
         playground: true,
       },
     },
-  }),
-  plugins: [
-    markdownMathPlugin({
-      provider: "katex",
-      katexOptions: {
-        throwOnError: false,
-        strict: "ignore",
-      },
-    }),
-
-    revealJsPlugin({
-      plugins: ["highlight", "math", "search", "notes", "zoom"],
-      config: {
-        transition: "slide",
-        backgroundTransition: "fade",
-      },
-    }),
-
-    searchPlugin({
-      maxSuggestions: 10,
-      isFuzzySearch: true,
-      isTitleSearchable: true,
-      isContentSearchable: true,
-    }),
-
-    mediumZoomPlugin({
-      selector: "img",
-      options: {
-        background: "rgba(0, 0, 0, 0.8)",
-      },
-    }),
-
-    backToTopPlugin(),
-
-    readingTimePlugin(),
-
-    copyCodePlugin({
-      showInMobile: true,
-      duration: 2000,
-    }),
-
-    sitemapPlugin({
-      hostname: "https://www.cloudswordsage.top/",
-    }),
-
-    commentPlugin({
+    comment: {
       provider: "Giscus",
+      comment: true,
       repo: "CloudSwordSage/comments",
       repoId: "R_kgDOO4pqVw",
       category: "General",
@@ -98,6 +74,42 @@ export default defineUserConfig({
       emitMetadata: true,
       inputPosition: "bottom",
       lang: "zh-CN",
+    },
+    search: {
+      provider: "local",
+      options: {
+        locales: {
+          "/": {
+            placeholder: "搜索文章",
+          },
+        },
+      },
+    },
+    copyright: "CC-BY-NC-4.0",
+    hostname: "https://www.cloudswordsage.top/",
+  }),
+  plugins: [
+    revealJsPlugin({
+      plugins: ["highlight", "math", "search", "notes", "zoom"],
+      config: {
+        transition: "slide",
+        backgroundTransition: "fade",
+      },
+    }),
+
+    mediumZoomPlugin({
+      selector: "img",
+      options: {
+        background: "rgba(0, 0, 0, 0.8)",
+      },
+    }),
+
+    markdownExtPlugin({
+      gfm: true,
+      footnote: true,
+      tasklist: true,
+      component: true,
+      vPre: true,
     }),
   ],
   bundler: viteBundler(),

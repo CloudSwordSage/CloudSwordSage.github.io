@@ -18,7 +18,7 @@ export default defineThemeConfig({
   navbarSocialIncludes: ["github"],
   logo: "https://avatars.githubusercontent.com/u/115152811",
   footer: {
-    copyright: "Copyright © 2024-present CloudSwordSage",
+    copyright: "Copyright © 2025-present CloudSwordSage",
   },
   navbar,
 });
