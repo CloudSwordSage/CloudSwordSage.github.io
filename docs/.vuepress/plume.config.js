@@ -17,6 +17,8 @@ export default defineThemeConfig({
   ],
   navbarSocialIncludes: ["github"],
   logo: "/images/blogger.jpg",
-
+  footer: {
+    copyright: "Copyright © 2024-present mrcchenfeng",
+  },
   navbar,
 });
