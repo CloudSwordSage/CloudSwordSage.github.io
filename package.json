@@ -12,7 +12,6 @@
   "devDependencies": {
     "@vuepress/bundler-vite": "^2.0.0-rc.23",
     "@vuepress/plugin-back-to-top": "^2.0.0-rc.108",
-    "@vuepress/plugin-baidu-analytics": "^2.0.0-rc.108",
     "@vuepress/plugin-comment": "^2.0.0-rc.108",
     "@vuepress/plugin-copy-code": "^2.0.0-rc.108",
     "@vuepress/plugin-markdown-math": "^2.0.0-rc.108",

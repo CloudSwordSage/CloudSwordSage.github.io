@@ -10,7 +10,6 @@ import { readingTimePlugin } from "@vuepress/plugin-reading-time";
 import { copyCodePlugin } from "@vuepress/plugin-copy-code";
 import { sitemapPlugin } from "@vuepress/plugin-sitemap";
 import { commentPlugin } from "@vuepress/plugin-comment";
-import { baiduAnalyticsPlugin } from "@vuepress/plugin-baidu-analytics";
 
 export default defineUserConfig({
   lang: "zh-CN",
@@ -22,7 +21,20 @@ export default defineUserConfig({
         "“我们有两个方法来进行软件设计：一个是让其足够的简单以至于让BUG无法藏身；另一个就是让其足够的复杂，让人找不到BUG。前者更难一些” — C.A.R. Hoare",
     },
   },
-  head: [["link", { rel: "icon", href: "/images/logo.jpg" }]],
+  head: [
+    ["link", { rel: "icon", href: "/images/logo.jpg" }],
+    [
+      "script",
+      {},
+      `var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?727d308aeb06a324aa7111f7276a320b";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();`,
+    ],
+  ],
   theme: plumeTheme({
     plugins: {
       markdownEnhance: {
@@ -86,10 +98,6 @@ export default defineUserConfig({
       emitMetadata: true,
       inputPosition: "bottom",
       lang: "zh-CN",
-    }),
-
-    baiduAnalyticsPlugin({
-      id: "727d308aeb06a324aa7111f7276a320b",
     }),
   ],
   bundler: viteBundler(),
