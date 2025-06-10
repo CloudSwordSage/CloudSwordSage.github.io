@@ -1,1 +1,3 @@
 Sitemap: https://www.cloudswordsage.top/sitemap.xml
+User-agent:*
+Disallow:
